@@ -4,15 +4,12 @@
       <div class="span12">
         <h4>X-Hab Control Panel</h4>
         <div class="session">
-          Logged in as daniel@aktionlab.com
-          <a href="/" class="button black mini">
-            <i class="icon-signin"></i>
-            Sign in
-          </a>
-          <a href="/" class="button black mini">
-            <i class="icon-signout"></i>
-            Sign out
-          </a>
+          <% if user_signed_in? %>
+          <%= t :logged_in_as %> <%= current_user.email %>
+          <%= link_to t(:sign_out), destroy_user_session_path, :class => "button black mini" %>
+          <% else %>
+          <%= link_to t(:sign_in), new_user_session_path, :class => "button black mini"  %>  
+          <% end %>
         </div>
       </div>
     </div>

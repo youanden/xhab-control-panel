@@ -3,3 +3,6 @@
 
 en:
   hello: "Hello world"
+  logged_in_as: "Logged in as"
+  sign_in: "Sign in"
+  sign_out: "Sign out"
