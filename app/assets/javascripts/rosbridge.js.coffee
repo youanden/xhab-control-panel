@@ -25,6 +25,7 @@ window.charts = {}
 
 $ ->
   init_view_switching()
+  return if $('body').hasClass('logged-out')
   init_rosbridge()
   #init_fluid_line_pressure_upstream_chart()
   #init_fluid_line_pressure_downstream_chart()
@@ -174,6 +175,7 @@ $ ->
 # Soil Sensor Arm
 #-------------------------------------------
 $ ->
+  return if $('body').hasClass('logged-out')
   sensor_arm_width = $("#soil-sensor-arm").parent().width
   sensor_arm_height = $("#soil-sensor-arm").parent().height
   
@@ -199,6 +201,7 @@ $ ->
 # Lights
 #-------------------------------------------
 $ ->
+  return if $('body').hasClass('logged-out')
   light_paper_width = 318
   light_paper_height = 318
   center_x_pos = light_paper_width/2

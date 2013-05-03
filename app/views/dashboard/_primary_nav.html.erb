@@ -5,7 +5,7 @@
         <i class="icon-dashboard"></i> Dashboard
       <% end %>
     </li>
-
+    <% if user_signed_in? %>
     <li>
       <%= link_to "", :data => { 'ui-context' => 'fluid' }  do %>
         <i class="icon-beaker"></i> Fluid
@@ -29,6 +29,6 @@
         <i class="icon-hdd"></i> Logs
       <% end %>
     </li>
- 
+    <% end %>
   </ul>
 </nav>

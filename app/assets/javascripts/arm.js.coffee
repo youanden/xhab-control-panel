@@ -57,6 +57,7 @@ $ ->
     arm_execute_motion()
 
 $ ->
+  return if $('body').hasClass('logged-out')
   console.log 'arm'
   scale = 21
   w = window
