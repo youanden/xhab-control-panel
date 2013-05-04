@@ -37,4 +37,3 @@
 //= require search
 //= require arm
 //= require rosbridge
-//= require dashboard

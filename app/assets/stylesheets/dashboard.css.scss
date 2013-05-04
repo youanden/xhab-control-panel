@@ -57,11 +57,6 @@ span.sensor-value {
   font-weight: bold;
 }
 
-#sign-in-modal {
-  form, input[type="checkbox"], label {
-    margin: 0;
-  }
-  label {
-    display: inline-block;
-  }
+.login-wrapper {
+  margin-bottom: 20px;
 }

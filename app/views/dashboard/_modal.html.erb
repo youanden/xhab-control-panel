@@ -1,27 +1,3 @@
-<% unless user_signed_in? %>
-<div id="sign-in-modal" class="black-box modal hide fade">
-  <div class="modal-header tab-header">
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
-    <span>Sign In</span>
-  </div>
-  <%= form_for :user, :url => session_path(:user) do |f| %>
-  <div class="modal-body separator">
-    <%= f.text_field :email, :placeholder => 'Email Address', :class => 'input-block-level' %>
-    <%= f.password_field :password, :placeholder => 'Password', :class => 'input-block-level' %>
-    <% if devise_mapping.rememberable? %>  
-      <%= f.check_box :remember_me, :class => 'normal-check' %> <%= f.label :remember_me %> 
-    <% end %>  
-   </div>
-    <div class="modal-footer">
-      <div class="inner-well">
-      <a class="button mini rounded light-gray" data-dismiss="modal">Cancel</a>
-      <%= f.submit "Sign in", :class => 'button mini rounded blue' %>
-      </div>
-    </div>
-  <% end %>  
-</div>
-<% end %>
-
 <div id="modal-gallery" class="black-box modal modal-gallery hide fade">
   <div class="modal-header tab-header">
     <button type="button" class="close" data-dismiss="modal">&times;</button>

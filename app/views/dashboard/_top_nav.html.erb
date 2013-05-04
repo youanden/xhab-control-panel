@@ -8,7 +8,7 @@
           <%= t :logged_in_as %> <%= current_user.email %>
           <%= link_to t(:sign_out), destroy_user_session_path, :class => "button black mini" %>
           <% else %>
-          <a href="#" id="sign-in-modal-link" class="button black mini"><%= t :sign_in %></a>
+          <%= link_to t(:sign_in), new_user_session_path, :class => "button black mini" %>
           <% end %>
         </div>
       </div>
