@@ -1,23 +1,15 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
 psql_defaults: &psql_defaults
   adapter: postgresql
   encoding: unicode
   hostname: localhost
   username: postgres
   password: 123
-  pool: 5
+  port: 5432
 
 development:
   <<: *psql_defaults
   database: xhab_development
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
   <<: *psql_defaults
   database: xhab_test
